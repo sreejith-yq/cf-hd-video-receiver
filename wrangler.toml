@@ -1,0 +1,12 @@
+name = "hd-video-receiver"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# Queue producer binding
+[[queues.producers]]
+queue = "video-processing-queue"
+binding = "VIDEO_QUEUE"
+
+# Environment variables (set these via wrangler secret put)
+[vars]
+# FIRESTORE_PRIVATE_KEY_JSON will be set as a secret
